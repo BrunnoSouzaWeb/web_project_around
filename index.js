@@ -1,8 +1,8 @@
 // elementos DOM aqui eu crio uma variavel //
 
-let editButton = document.querySelector(".profile__edit-button");
-let closeButton = document.querySelector(".popup__container-closebutton");
-let formElement = document.querySelector(".popup__container");
+const editButton = document.querySelector(".profile__edit-button");
+const closeButton = document.querySelector(".popup__container-closebutton");
+const formElement = document.querySelector(".popup__container");
 
 function openPopUp() {
   let popup = document.querySelector(".popup");
@@ -11,7 +11,7 @@ function openPopUp() {
 }
 
 function closePopUp() {
-  let popup = document.querySelector(".popup");
+  const popup = document.querySelector(".popup");
 
   popup.classList.remove("popup__opened");
 }
@@ -20,15 +20,15 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault(); //evita o recarregamento da página//
 
   // aqui memoriza os dados que digitei //
-  let nameInput = document.querySelector("#name").value;
-  let jobInput = document.querySelector("#job").value;
+  const nameInput = document.querySelector("#name").value;
+  const jobInput = document.querySelector("#job").value;
 
   // imprimir os dados, porem precisa ligar//
   console.log(nameInput, jobInput);
 
   //local onde será exibido //
-  let userName = document.querySelector(".profile__name");
-  let userJob = document.querySelector(".profile__job");
+  const userName = document.querySelector(".profile__name");
+  const userJob = document.querySelector(".profile__job");
 
   // define os lugares que vai imprimir o nome e trabalho, subistituindo ooque tinha antes//
   userName.textContent = nameInput;

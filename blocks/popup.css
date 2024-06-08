@@ -79,19 +79,16 @@
   .popup__container {
     width: 282px;
     align-items: center;
-    /*height: 322px;*/
   }
 
   .popup__container-closebutton {
     width: 26px;
-    /* height: 26px;   */
     top: -40px;
     right: -30px;
   }
 
   .popup__container-title {
     width: 238px;
-    /* height: 22px; */
   }
 
   .popup__container-input {
@@ -100,6 +97,5 @@
 
   .popup__container-button {
     width: 238px;
-    /* height: 46px; */
   }
 }

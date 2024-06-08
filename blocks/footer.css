@@ -13,8 +13,19 @@
   color: #545454;
 }
 
+@media screen and (max-width: 1024px) {
+  .footer {
+    max-width: 585px;
+  }
+}
+
 @media screen and (max-width: 720px) {
+  .footer {
+    max-width: 288px;
+  }
+
   .footer__copyright {
+    max-width: 288px;
     font-size: 14px;
     line-height: 16.94px;
   }
