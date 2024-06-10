@@ -5,7 +5,7 @@ const closeButton = document.querySelector(".popup__container-closebutton");
 const formElement = document.querySelector(".popup__container");
 
 function openPopUp() {
-  let popup = document.querySelector(".popup");
+  const popup = document.querySelector(".popup");
 
   popup.classList.add("popup__opened");
 }
@@ -24,7 +24,7 @@ function handleProfileFormSubmit(evt) {
   const jobInput = document.querySelector("#job").value;
 
   // imprimir os dados, porem precisa ligar//
-  console.log(nameInput, jobInput);
+  // console.log(nameInput, jobInput);
 
   //local onde será exibido //
   const userName = document.querySelector(".profile__name");
