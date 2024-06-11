@@ -22,7 +22,7 @@
   display: flex;
   gap: 18px;
   align-items: center;
-  max-width: 415px;
+  max-width: 500px;
 }
 
 .profile__name {
