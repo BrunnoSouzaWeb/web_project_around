@@ -42,112 +42,54 @@
         </section>
 
         <section class="elements">
-          <div class="element">
-            <img
-              src="./images/vale.png"
-              alt="Foto Vale de Yosemite"
-              class="element__image"
-            />
-
-            <div class="element__description">
-              <h2 class="element__title">Vale de Yosemite</h2>
-              <img src="./images/like.png" alt="like" class="element__icon" />
-              <img
-                src="./images/like-dark.png"
-                alt="dark"
-                class="element__dark-icon"
-              />
-            </div>
-          </div>
-
-          <div class="element">
-            <img
-              src="./images/louise.png"
-              alt="Foto Lago Louise"
-              class="element__image"
-            />
-
-            <div class="element__description">
-              <h2 class="element__title">Lago Louise</h2>
-              <img src="./images/like.png" alt="like" class="element__icon" />
-              <img
-                src="./images/like-dark.png"
-                alt="dark"
-                class="element__dark-icon"
-              />
-            </div>
-          </div>
-
-          <div class="element">
-            <img
-              src="./images/montanha.png"
-              alt="Foto Montanha Care"
-              class="element__image"
-            />
-
-            <div class="element__description">
-              <h2 class="element__title">Montanhas Carefully</h2>
-              <img src="./images/like.png" alt="like" class="element__icon" />
-              <img
-                src="./images/like-dark.png"
-                alt="dark"
-                class="element__dark-icon"
-              />
-            </div>
-          </div>
-
-          <div class="element">
-            <img
-              src="./images/latemar.png"
-              alt="Foto Latemar"
-              class="element__image"
-            />
-
-            <div class="element__description">
-              <h2 class="element__title">Latemar</h2>
-              <img src="./images/like.png" alt="like" class="element__icon" />
-              <img
-                src="./images/like-dark.png"
-                alt="dark"
-                class="element__dark-icon"
-              />
-            </div>
-          </div>
-
-          <div class="element">
-            <img
-              src="./images/vanoise.png"
-              alt="Foto Vanoise National"
-              class="element__image"
-            />
-
-            <div class="element__description">
-              <h2 class="element__title">Vanoise National</h2>
-              <img src="./images/like.png" alt="like" class="element__icon" />
-              <img
-                src="./images/like-dark.png"
-                alt="dark"
-                class="element__dark-icon"
-              />
-            </div>
-          </div>
-
-          <div class="element">
-            <img
-              src="./images/lago.png"
-              alt="lago com barco"
-              class="element__image"
-            />
-
-            <div class="element__description">
-              <h2 class="element__title">Lago di Braies</h2>
-              <img src="./images/like.png" alt="like" class="element__icon" />
-              <img
-                src="./images/like-dark.png"
-                alt="dark"
-                class="element__dark-icon"
-              />
-            </div>
+          <div class="elements__cards">
+            <template class="elements__template">
+              <div class="elements__card">
+                <button class="elements__image-button">
+                  <img class="elements__image" src=" " alt="Imagem" />
+                </button>
+                <button
+                  class="elements__button elements__button_type_trash"
+                  type="button"
+                >
+                  <img
+                    class="elements__icon elements__icon_type_trash-can"
+                    src="./images/Trash.svg"
+                    alt="Botão de lixeira"
+                  />
+                </button>
+                <div class="elements__description">
+                  <h2 class="elements__title"></h2>
+                  <button
+                    class="elements__button elements__button_type_like"
+                    type="button"
+                  >
+                    <img
+                      class="elements__icon elements__icon_type_like-icon"
+                      src="./images/like.png"
+                      alt="Botão de curtir"
+                    />
+                  </button>
+                </div>
+                <div class="elements__window">
+                  <div class="elements__container">
+                    <button
+                      class="elements__button elements__button_type_close"
+                      type="button"
+                      id="window-close-button"
+                    >
+                      <img
+                        class="elements__icon elements__icon_type_close"
+                        src="./images/Close-icon.svg"
+                        alt="Botão de fechar"
+                      />
+                    </button>
+                    <img class="elements__window-image" src=" " alt="Imagem" />
+                    <h3 class="elements__window-name"></h3>
+                  </div>
+                </div>
+              </div>
+            </template>
           </div>
         </section>
 
@@ -178,6 +120,51 @@
                 src="./images/close.png"
                 alt="close icon"
                 class="popup__container-closebuttonicon"
+              />
+            </button>
+          </form>
+        </section>
+
+        <section class="popup-add-card popup">
+          <form class="popup-add-card__container popup__container">
+            <fieldset
+              class="popup-add-card__container-fieldset popup__container-fieldset"
+            >
+              <legend
+                class="popup-add-card__container-title popup__container-title"
+              >
+                Novo local
+              </legend>
+              <input
+                type="text"
+                class="popup-add-card__container-input popup__container-input"
+                id="title"
+                placeholder="Título"
+                required
+              />
+              <input
+                type="text"
+                class="popup-add-card__container-input popup__container-input"
+                id="link-input"
+                placeholder="Link de imagem"
+                required
+              />
+            </fieldset>
+
+            <button
+              class="popup-add-card__container-button popup__container-button"
+            >
+              Criar
+            </button>
+
+            <button
+              class="popup-add-card__container-closebutton popup__container-closebutton"
+              type="button"
+            >
+              <img
+                src="./images/close.png"
+                alt="close icon"
+                class="popup-add-card__container-closebuttonicon popup__container-closebuttonicon"
               />
             </button>
           </form>
