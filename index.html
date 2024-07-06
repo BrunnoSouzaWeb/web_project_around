@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,166 +14,148 @@
       <header class="header">
         <img src="./images/around.png" alt="Logo" class="header__logo" />
       </header>
-
       <main class="content">
         <section class="profile">
-          <img src="./images/profile.jpg" alt="perfil" class="profile__image" />
-
+          <img
+            src="./images/profile.jpg"
+            alt="perfil"
+            class="profile__image"
+          />
           <div class="profile__info">
-            <div class="profile__name-container">
-              <h2 class="profile__name">Jacques Cousteau</h2>
+            <div class="profile__name">
+              <p class="profile__text">Jacques Cousteau</p>
               <img
-                src="./images/edit.png"
+                src="./images/editbuttonprofile.svg"
                 alt="editar"
                 class="profile__edit-button"
               />
             </div>
-
-            <p class="profile__job">Explorador</p>
+            <p class="profile__profession">Explorador</p>
           </div>
+          <img
+            src="./images/addbuttonprofile.png"
+            alt="adicionar"
+            class="profile__add-button"
+          />
+        </section>
 
-          <button type="button" class="profile__add-button">
+        <section class="elements"></section>
+        <template class="template-card">
+          <article class="elements__card">
+            <img src="." alt="" class="elements__image" />
             <img
-              src="./images/add.png"
-              alt="adicionar"
-              class="profile__add-button-icon"
+              src="./images/Trash.svg"
+              alt="Botão de lixeira"
+              class="elements__image-trash"
             />
-          </button>
-        </section>
+            <div class="elements__text">
+              <h1 class="elements__title"></h1>
+              <img
+                src="./images/like.png"
+                alt="Botão de curtir"
+                class="elements__image-like"
+              />
+            </div>
+          </article>
+        </template>
+        <div class="popup">
+          <div class="popup__overlay"></div>
+          <form class="popup__form">
+            <img
+              src="./images/Close-icon.svg"
+              alt="Botão Fechar"
+              class="popup__button-closed"
+            />
+            <h3 class="popup__header">Editar perfil</h3>
+            <input
+              type="text"
+              id="input-name"
+              class="popup__name popup__input"
+              minlength="2"
+              maxlength="40"
+              placeholder="Jacques Cousteau"
+              required
+            />
+            <span class="popup__error-visible input-name-error">
 
-        <section class="elements">
-          <div class="elements__cards">
-            <template class="elements__template">
-              <div class="elements__card">
-                <button class="elements__image-button">
-                  <img class="elements__image" src=" " alt="Imagem" />
-                </button>
-                <button
-                  class="elements__button elements__button_type_trash"
-                  type="button"
-                >
-                  <img
-                    class="elements__icon elements__icon_type_trash-can"
-                    src="./images/Trash.svg"
-                    alt="Botão de lixeira"
-                  />
-                </button>
-                <div class="elements__description">
-                  <h2 class="elements__title"></h2>
-                  <button
-                    class="elements__button elements__button_type_like"
-                    type="button"
-                  >
-                    <img
-                      class="elements__icon elements__icon_type_like-icon"
-                      src="./images/like.png"
-                      alt="Botão de curtir"
-                    />
-                  </button>
-                </div>
-                <div class="elements__window">
-                  <div class="elements__container">
-                    <button
-                      class="elements__button elements__button_type_close"
-                      type="button"
-                      id="window-close-button"
-                    >
-                      <img
-                        class="elements__icon elements__icon_type_close"
-                        src="./images/Close-icon.svg"
-                        alt="Botão de fechar"
-                      />
-                    </button>
-                    <img class="elements__window-image" src=" " alt="Imagem" />
-                    <h3 class="elements__window-name"></h3>
-                  </div>
-                </div>
-              </div>
-            </template>
+            </span>
+
+            <input
+              type="text"
+              id="input-description"
+              class="popup__description popup__input"
+              minlength="2"
+              maxlength="200"
+              placeholder="Explorador"
+              required
+            />
+            <span class="popup__error-visible input-description-error">
+
+            </span>
+
+            <button type="submit" class="popup__button-create popup__button">
+              Salvar
+            </button>
+          </form>
+        </div>
+        <div class="popup" id="popup-card">
+          <div class="popup__overlay"></div>
+          <form class="popup__card-form popup__form">
+            <img
+              src="./images/Close-icon.svg"
+              alt="Botão Fechar"
+              class="popup__card-button-closed"
+            />
+            <h3 class="popup__card-header">Novo Local</h3>
+            <input
+              type="text"
+              id="input-title"
+              class="popup__card-title popup__input"
+              value=""
+              minlength="2"
+              maxlength="30"
+              placeholder="Título"
+              required
+            />
+            <span class="popup__error-visible input-title-error"></span>
+
+            <input
+              type="url"
+              id="input-url"
+              class="popup__card-url popup__input"
+              value=""
+              minlength="2"
+              placeholder="Link da imagem"
+              required
+            />
+            <span class="popup__error-visible input-url-error"> </span>
+
+            <button
+              type="submit"
+              class="popup__card-button-create popup__button"
+            >
+             Salvar
+            </button>
+          </form>
+        </div>
+        <div class="popup" id="popup-image">
+          <div class="popup__overlay"></div>
+          <div class="popup__image-content">
+            <img
+              src="./images/Close-icon.svg"
+              alt="Botão Fechar"
+              class="popup__image-button-closed"
+            />
+            <img src="." alt="" class="popup__image-photo" />
+            <p class="popup__image-name"></p>
           </div>
-        </section>
-
-        <section class="popup">
-          <form class="popup__container">
-            <fieldset class="popup__container-fieldset">
-              <legend class="popup__container-title">Editar perfil</legend>
-              <input
-                type="text"
-                class="popup__container-input"
-                id="name"
-                placeholder="Jacques Costeau"
-                required
-              />
-              <input
-                type="text"
-                class="popup__container-input"
-                id="job"
-                placeholder="Explorador"
-                required
-              />
-            </fieldset>
-
-            <button class="popup__container-button">Salvar</button>
-
-            <button class="popup__container-closebutton" type="button">
-              <img
-                src="./images/close.png"
-                alt="close icon"
-                class="popup__container-closebuttonicon"
-              />
-            </button>
-          </form>
-        </section>
-
-        <section class="popup-add-card popup">
-          <form class="popup-add-card__container popup__container">
-            <fieldset
-              class="popup-add-card__container-fieldset popup__container-fieldset"
-            >
-              <legend
-                class="popup-add-card__container-title popup__container-title"
-              >
-                Novo local
-              </legend>
-              <input
-                type="text"
-                class="popup-add-card__container-input popup__container-input"
-                id="title"
-                placeholder="Título"
-                required
-              />
-              <input
-                type="text"
-                class="popup-add-card__container-input popup__container-input"
-                id="link-input"
-                placeholder="Link de imagem"
-                required
-              />
-            </fieldset>
-
-            <button
-              class="popup-add-card__container-button popup__container-button"
-            >
-              Criar
-            </button>
-
-            <button
-              class="popup-add-card__container-closebutton popup__container-closebutton"
-              type="button"
-            >
-              <img
-                src="./images/close.png"
-                alt="close icon"
-                class="popup-add-card__container-closebuttonicon popup__container-closebuttonicon"
-              />
-            </button>
-          </form>
-        </section>
+        </div>
       </main>
       <footer class="footer">
-        <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
+        <p class="footer__copyright">&copy 2021 Around The U.S.</p>
       </footer>
-      <script src="./index.js"></script>
     </div>
+    <script src="./script/script.js"></script>
+    <script src="./script/validate.js"></script>
   </body>
 </html>
