@@ -43,7 +43,9 @@
 
 .elements__text {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 21px;
+  padding-right: 15px;
   align-items: center;
   background-color: #ffffff;
   max-height: 79px;

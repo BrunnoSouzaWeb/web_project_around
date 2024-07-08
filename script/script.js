@@ -78,7 +78,6 @@ function closePopup(popup) {
 }
 
 function handleEscapeKey(evt) {
-  // console.log(evt);
   if (evt.key === "Escape") {
     const openPopups = document.querySelectorAll(".popup__open");
     openPopups.forEach((popup) => closePopup(popup));
