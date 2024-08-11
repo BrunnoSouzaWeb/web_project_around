@@ -54,9 +54,9 @@
             </div>
           </article>
         </template>
-        <div class="popup">
+        <div class="popup" id="popup-perfil">
           <div class="popup__overlay"></div>
-          <form class="popup__form">
+          <form id="form-perfil" class="popup__form" novalidate>
             <img
               src="./images/Close-icon.svg"
               alt="Botão Fechar"
@@ -66,6 +66,7 @@
             <input
               type="text"
               id="input-name"
+              name="name"
               class="popup__name popup__input"
               minlength="2"
               maxlength="40"
@@ -77,6 +78,7 @@
             <input
               type="text"
               id="input-description"
+              name="description"
               class="popup__description popup__input"
               minlength="2"
               maxlength="200"
@@ -92,7 +94,7 @@
         </div>
         <div class="popup" id="popup-card">
           <div class="popup__overlay"></div>
-          <form class="popup__card-form popup__form">
+          <form id="form-card" class="popup__card-form popup__form" novalidate>
             <img
               src="./images/Close-icon.svg"
               alt="Botão Fechar"
@@ -147,9 +149,6 @@
         <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
       </footer>
     </div>
-    <script type="module" src="./script/utils.js"></script>
-    <script type="module" src="./script/card.js"></script>
-    <script type="module" src="./script/FormValidator.js"></script>
-    <script type="module" src="./script/index.js"></script>
+    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>

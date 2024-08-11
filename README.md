@@ -1,5 +1,9 @@
 # Tripleten web_project_around
 
+# Projeto do sprint 11
+
+Este projeto foi todo refatorado utilizando apenas classes (com uso de herança) e acoplamento entre as classes. Também fizemos uso do Webpack para sua otimização.
+
 # Projeto do sprint 10
 
 O principal objetivo foi refatorar o código anterior utilizando classes de objeto e princípios de Javascript Modular.

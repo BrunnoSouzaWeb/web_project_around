@@ -1,10 +1,9 @@
-import { openPopup } from "./utils.js";
-
 export default class Card {
-  constructor(data, cardSelector) {
-    this._name = data.name;
-    this._link = data.link;
+  constructor({ name, link }, cardSelector, handleCardClick) {
+    this._name = name;
+    this._link = link;
     this._cardSelector = cardSelector;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -58,13 +57,6 @@ export default class Card {
   }
 
   _showCardPopupClick() {
-    const popupImage = document.querySelector("#popup-image");
-    openPopup(popupImage);
-    const popupPhoto = popupImage.querySelector(".popup__image-photo");
-    const popupTitle = popupImage.querySelector(".popup__image-name");
-
-    popupPhoto.src = this._link;
-    popupTitle.textContent = this._name;
-    this.alt = this._name;
+    this._handleCardClick(this._name, this._link);
   }
 }
