@@ -6,22 +6,21 @@
     <meta name="description" content="photos" />
     <meta name="author" content="Brunno Souza" />
     <meta name="keywords" content="natureza, paisagens, popup, POO" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <title>Around The U.S.</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/around.png" alt="Logo" class="header__logo" />
+        <img src="<%=require('./images/around.png')%>" alt="Logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile">
-          <img src="./images/profile.jpg" alt="perfil" class="profile__image" />
+          <img src="<%=require('./images/profile.jpg')%>" alt="perfil" class="profile__image" />
           <div class="profile__info">
             <div class="profile__name">
               <p class="profile__text">Jacques Cousteau</p>
               <img
-                src="./images/editbuttonprofile.svg"
+				        src="<%=require('./images/editbuttonprofile.svg')%>"
                 alt="editar"
                 class="profile__edit-button"
               />
@@ -29,7 +28,7 @@
             <p class="profile__profession">Explorador</p>
           </div>
           <img
-            src="./images/addbuttonprofile.png"
+			      src="<%=require('./images/addbuttonprofile.png')%>"
             alt="adicionar"
             class="profile__add-button"
           />
@@ -38,16 +37,16 @@
         <section class="elements"></section>
         <template class="template-card">
           <article class="elements__card">
-            <img src="." alt="" class="elements__image" />
+            <img src="" alt="" class="elements__image" />
             <img
-              src="./images/Trash.svg"
+			        src="<%=require('./images/Trash.svg')%>"
               alt="Botão de lixeira"
               class="elements__image-trash"
             />
             <div class="elements__text">
               <h1 class="elements__title"></h1>
               <img
-                src="./images/like.png"
+				        src="<%=require('./images/like.png')%>"
                 alt="Botão de curtir"
                 class="elements__image-like"
               />
@@ -58,7 +57,7 @@
           <div class="popup__overlay"></div>
           <form id="form-perfil" class="popup__form" novalidate>
             <img
-              src="./images/Close-icon.svg"
+			        src="<%=require('./images/Close-icon.svg')%>"
               alt="Botão Fechar"
               class="popup__button-closed"
             />
@@ -96,7 +95,7 @@
           <div class="popup__overlay"></div>
           <form id="form-card" class="popup__card-form popup__form" novalidate>
             <img
-              src="./images/Close-icon.svg"
+			        src="<%=require('./images/Close-icon.svg')%>"
               alt="Botão Fechar"
               class="popup__card-button-closed"
             />
@@ -136,11 +135,11 @@
           <div class="popup__overlay"></div>
           <div class="popup__image-content">
             <img
-              src="./images/Close-icon.svg"
+			        src="<%=require('./images/Close-icon.svg')%>"
               alt="Botão Fechar"
               class="popup__image-button-closed"
             />
-            <img src="." alt="" class="popup__image-photo" />
+            <img src="" alt="" class="popup__image-photo" />
             <p class="popup__image-name"></p>
           </div>
         </div>
@@ -149,6 +148,5 @@
         <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
       </footer>
     </div>
-    <script type="module" src="./pages/index.js"></script>
   </body>
 </html>

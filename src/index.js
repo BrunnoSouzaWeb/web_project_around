@@ -1,14 +1,16 @@
-import Section from "../components/Section.js";
+import "./pages/index.css";
 
-import Card from "../components/card.js";
+import Section from "./components/Section.js";
 
-import PopupWithImage from "../components/PopupWithImage.js";
+import Card from "./components/card.js";
 
-import PopUpWithForm from "../components/PopupWithForm.js";
+import PopupWithImage from "./components/PopupWithImage.js";
 
-import FormValidator from "../components/FormValidator.js";
+import PopUpWithForm from "./components/PopupWithForm.js";
 
-import UserInfo from "../components/UserInfo.js";
+import FormValidator from "./components/FormValidator.js";
+
+import UserInfo from "./components/UserInfo.js";
 
 const userInfo = new UserInfo({
   name: ".profile__text",
