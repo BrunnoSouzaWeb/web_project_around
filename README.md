@@ -1,5 +1,9 @@
 # Tripleten web_project_around
 
+# Projeto do sprint 12
+
+Este projeto foi totalmente refatorado utilizando API´s para a execução de suas funcionalidades.
+
 # Projeto do sprint 11
 
 Este projeto foi todo refatorado utilizando apenas classes (com uso de herança) e acoplamento entre as classes. Também fizemos uso do Webpack para sua otimização.

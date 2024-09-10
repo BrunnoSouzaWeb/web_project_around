@@ -16,16 +16,17 @@
       <main class="content">
         <section class="profile">
           <img src="<%=require('./images/profile.jpg')%>" alt="perfil" class="profile__image" />
+          <img src="<%=require('./images/edit_avatar.png')%>" alt="editavatar" class="profile__edit-avatar" />
           <div class="profile__info">
             <div class="profile__name">
-              <p class="profile__text">Jacques Cousteau</p>
+              <p class="profile__text"></p>
               <img
 				        src="<%=require('./images/editbuttonprofile.svg')%>"
                 alt="editar"
                 class="profile__edit-button"
               />
             </div>
-            <p class="profile__profession">Explorador</p>
+            <p class="profile__profession"></p>
           </div>
           <img
 			      src="<%=require('./images/addbuttonprofile.png')%>"
@@ -45,11 +46,14 @@
             />
             <div class="elements__text">
               <h1 class="elements__title"></h1>
-              <img
-				        src="<%=require('./images/like.png')%>"
-                alt="Botão de curtir"
-                class="elements__image-like"
-              />
+              <div class="elements_info">
+                <img
+				          src="<%=require('./images/like.png')%>"
+                  alt="Botão de curtir"
+                  class="elements__image-like"
+                />
+                <p class="elements__count-like"></p>
+              </div>
             </div>
           </article>
         </template>
@@ -69,7 +73,6 @@
               class="popup__name popup__input"
               minlength="2"
               maxlength="40"
-              placeholder="Jacques Cousteau"
               required
             />
             <span class="popup__error-visible input-name-error"> </span>
@@ -77,11 +80,10 @@
             <input
               type="text"
               id="input-description"
-              name="description"
+              name="about"
               class="popup__description popup__input"
               minlength="2"
               maxlength="200"
-              placeholder="Explorador"
               required
             />
             <span class="popup__error-visible input-description-error"> </span>
@@ -142,6 +144,49 @@
             <img src="" alt="" class="popup__image-photo" />
             <p class="popup__image-name"></p>
           </div>
+        </div>
+        <div class="popup" id="popup-confirmation">
+          <div class="popup__overlay"></div>
+          <form id="form-confirmation" class="popup__confirmation-form popup__form" >
+            <img
+              src="<%=require('./images/Close-icon.svg')%>"
+              alt="Botão Fechar"
+              class="popup__confirmation-button-closed"
+            />
+
+            <h2 class="popup__confirmation-header">Tem certeza?</h2>
+
+            <button
+              type="submit"
+              class="popup__confirmation-button-create popup__button"
+            >
+            Sim
+            </button>
+          </form>
+        </div>
+        <div class="popup" id="popup-avatar">
+          <div class="popup__overlay"></div>
+          <form id="form-avatar" class="popup__avatar-form popup__form" novalidate>
+            <img
+              src="<%=require('./images/Close-icon.svg')%>"
+              alt="Botão Fechar"
+              class="popup__avatar-button-closed"
+            />
+
+              <h2 class="popup__avatar-header">Alterar a foto do perfil</h2>
+              <input
+                type="url"
+                id="input-link"
+                name="avatarLink"
+                class="popup__avatar-url popup__input"
+                placeholder="Link da imagem"
+                required
+              />
+
+              <span class="popup__error-visible input-link-error"> </span>
+
+              <button type="submit" class="popup__avatar-button-create popup__button">Salvar</button>
+          </form>
         </div>
       </main>
       <footer class="footer">

@@ -10,8 +10,9 @@
 .profile__image {
   grid-area: image;
   border-radius: 50%;
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }
 
 .profile__info {
@@ -68,6 +69,24 @@
 
 .profile__add-button:hover {
   opacity: 50%;
+}
+
+.profile__edit-avatar {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  top: -120px;
+  margin: 10px;
+  padding: 50px;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.profile__edit-avatar:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
